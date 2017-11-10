@@ -1,0 +1,34 @@
+body {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+h1 {
+  border-bottom: 2px solid #bdbdbd;
+  text-align: center;
+}
+
+h2 {
+  display: inline-block;
+  border-bottom: 2px solid #bdbdbd;
+  height: 0.95em;
+}
+
+small {
+  font-size: 75%;
+  color: #616161;
+}
+
+section {
+  border-bottom: 1px solid #333;
+}
+
+section article {
+  margin-left: 1rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+section:last-of-type,
+section article:last-of-type {
+  border: none;
+}

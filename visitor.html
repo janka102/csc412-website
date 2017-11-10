@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Visitor Log</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="css/site.css">
+  <link rel="stylesheet" type="text/css" href="css/visitor.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="." class="nav-avatar">
+          <img src="https://gravatar.com/avatar/708dc88ce629f35288eaa787b46f9f63?s=39" alt="home">
+        </a>
+      </li>
+      <li>
+        <a href="about.html">About Me</a>
+      </li>
+      <li>
+        <a href="current.html">Current Work</a>
+      </li>
+      <li>
+        <a href="visitor.html" class="active">Visitors</a>
+      </li>
+      <li class="nav-random">
+        <button id="background-random" class="icon-dice" title="Random nav color"></button>
+      </li>
+    </ul>
+  </nav>
+
+  <h1>Visitors</h1>
+
+  <form action="log.php">
+    <label>First name:
+      <input name="first-name">
+    </label>
+    <label>Last name:
+      <input name="last-name">
+    </label>
+    <label>Email:
+      <input name="email">
+    </label>
+    <button>Submit</button>
+  </form>
+
+  <script src="js/site.js"></script>
+</body>
+
+</html>
