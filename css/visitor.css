@@ -9,6 +9,11 @@ blockquote {
   margin: 0 0 0.5rem;
 }
 
+blockquote pre {
+  font: inherit;
+  white-space: pre-wrap;
+}
+
 blockquote cite {
   font-size: 0.8rem;
   display: block;
