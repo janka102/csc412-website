@@ -1,8 +1,3 @@
-body {
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
 h1 {
   border-bottom: 2px solid #bdbdbd;
   text-align: center;
@@ -11,7 +6,7 @@ h1 {
 h2 {
   display: inline-block;
   border-bottom: 2px solid #bdbdbd;
-  height: 0.95em;
+  height: 1.1em;
 }
 
 small {
@@ -21,10 +16,11 @@ small {
 
 section {
   border-bottom: 1px solid #333;
+  margin-bottom: 1rem;
 }
 
 section article {
-  margin-left: 1rem;
+  margin: 0 0 1rem 1rem;
   border-bottom: 1px solid #dbdbdb;
 }
 

@@ -1,18 +1,9 @@
-html,
-body {
-  height: 100vh;
-  width: 100vw;
-}
-
-body {
+#profile {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-main {
-  text-align: center;
+  padding: 3rem;
 }
 
 .avatar {
