@@ -1,13 +1,13 @@
 <?php
-  $title = 'Current Work';
-  $css = array('current.css');
+  $title = 'Resume';
+  $css = array('resume.css');
   $js = array();
   include('header.php');
 ?>
 
 <div class="row">
   <div class="col-12">
-    <h1>Current Work</h1>
+    <h1>Resume</h1>
 
     <section>
       <h2>Experience</h2>
