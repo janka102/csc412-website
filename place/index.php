@@ -1,9 +1,8 @@
 <?php
-$title = 'r/place';
-$page = 'place';
-$css = array('place.css');
-$js = array('place.js');
-include('../header.php');
+  $title = 'r/place';
+  $css = array('place.css');
+  $js = array('place.js');
+  include('../header.php');
 ?>
 
 <div class="row">

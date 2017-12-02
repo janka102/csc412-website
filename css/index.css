@@ -12,6 +12,11 @@
   animation: rainbow-shadow 16s infinite;
 }
 
+h1 {
+  border-bottom: none;
+  text-align: left;
+}
+
 blockquote {
   font-style: italic;
   line-height: 1.5rem;

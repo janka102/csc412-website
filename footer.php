@@ -1,11 +1,12 @@
-</main>
+  </main>
 
-<?php $all_js = array_merge(array('main.js'), $js) ?>
+<?php
+  $all_js = array_merge(array('main.js'), $js);
 
-<?php for ($file=0; $file < count($all_js); $file++) { ?>
-  <script src="<?= $base_url ?>js/<?= $all_js[$file] ?>"></script>
-<?php } ?>
-
+  foreach ($all_js as $js_file) {
+    echo "  <script src=\"js/$js_file\"></script>\n";
+  }
+?>
 </body>
 
 </html>

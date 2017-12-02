@@ -1,14 +1,12 @@
 <?php
-$title = 'Current Work';
-$page = 'current';
-$css = array('current.css');
-$js = array();
-include('header.php');
+  $title = 'Current Work';
+  $css = array('current.css');
+  $js = array();
+  include('header.php');
 ?>
 
 <div class="row">
   <div class="col-12">
-
     <h1>Current Work</h1>
 
     <section>
@@ -63,7 +61,6 @@ include('header.php');
         <p>Associates of Science in Computer Science</p>
       </article>
     </section>
-
   </div>
 </div>
 

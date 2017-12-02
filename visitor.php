@@ -1,9 +1,8 @@
 <?php
-$title = 'Visitor Log';
-$page = 'visitor';
-$css = array('visitor.css');
-$js = array();
-include('header.php');
+  $title = 'Visitors';
+  $css = array('visitor.css');
+  $js = array();
+  include('header.php');
 ?>
 
 <div class="row">

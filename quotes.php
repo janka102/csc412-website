@@ -1,9 +1,8 @@
 <?php
-$title = 'Quotes';
-$page = 'quotes';
-$css = array('visitor.css');
-$js = array();
-include('header.php');
+  $title = 'Quotes';
+  $css = array('visitor.css');
+  $js = array();
+  include('header.php');
 ?>
 
 <div class="row">

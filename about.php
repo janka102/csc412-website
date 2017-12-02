@@ -1,7 +1,6 @@
 <?php
-  $title = 'About Me';
-  $page = 'about';
-  $css = array('about.css');
+  $title = 'About';
+  $css = array();
   $js = array();
   include('header.php');
 ?>

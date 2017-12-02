@@ -59,3 +59,8 @@ nav .navbar-collapse-input {
 nav .navbar-collapse-input:checked + .navbar-collapse {
   display: block;
 }
+
+h1 {
+  border-bottom: 2px solid #bdbdbd;
+  text-align: center;
+}
