@@ -51,3 +51,11 @@ nav .navbar-brand:hover img,
 nav .navbar-brand:focus img {
   opacity: 1;
 }
+
+nav .navbar-collapse-input {
+  display: none;
+}
+
+nav .navbar-collapse-input:checked + .navbar-collapse {
+  display: block;
+}

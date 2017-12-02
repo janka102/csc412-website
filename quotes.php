@@ -14,7 +14,7 @@ include('header.php');
 
   // Check connection
   if ($mysqli->connect_errno) {
-    echo '<div class="alert alert-danger col-12" role="alert">Failed to connect to MySQL: (' . htmlspecialchars($mysqli->connect_errno) . ') ' . htmlspecialchars($mysqli->connect_error) . '</div>';
+    echo '<div class="alert alert-danger col-12" role="alert">Failed to connect to MySQL: (', htmlspecialchars($mysqli->connect_errno), ') ', htmlspecialchars($mysqli->connect_error), '</div>';
   }
 
   if ($_POST['quote'] && $_POST['author']) {
@@ -40,14 +40,14 @@ include('header.php');
       $stmt->execute();
 
       // Delete old quotes
-      $result = $mysqli->query('SELECT `date` FROM `jsmick_quotes` ORDER BY `date` DESC LIMIT 1 OFFSET ' . $max_quotes);
+      $result = $mysqli->query("SELECT `date` FROM `jsmick_quotes` ORDER BY `date` DESC LIMIT 1 OFFSET $max_quotes");
 
       if ($row = $result->fetch_assoc()) {
-        $max_date = $row['date'];
-        $mysqli->query('DELETE FROM `jsmick_quotes` WHERE `date` <= "' . $max_date . '"');
+        $min_date = $row['date'];
+        $mysqli->query("DELETE FROM `jsmick_quotes` WHERE `date` <= \"$min_date\"");
       }
     } else {
-      echo '<div class="alert alert-danger col-12" role="alert"><b>Quote limit reached.</b> Try again in ' . (1 + $min_time - $diff) . ' second(s).</div>';
+      echo '<div class="alert alert-danger col-12" role="alert"><b>Quote limit reached.</b> Try again in ', (1 + $min_time - $diff), ' second(s).</div>';
     }
   }
 
@@ -55,7 +55,7 @@ include('header.php');
 
   if ($row = $result->fetch_assoc()) {
     do {
-      echo '<div class="col-6"><blockquote><pre>' . htmlspecialchars($row['quote']) . '</pre><cite>' . htmlspecialchars($row['author']) . '</cite></blockquote></div>' . "\n";
+      echo '<div class="col-6"><blockquote><pre>', htmlspecialchars($row['quote']), '</pre><cite>', htmlspecialchars($row['author']), '</cite></blockquote></div>', "\n";
     } while (($row = $result->fetch_assoc()));
   } else {
     echo '<div class="col-12 text-center"><i>No Quotes</i></div>';

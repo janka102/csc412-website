@@ -1,7 +1,6 @@
 <?php
 $title = 'r/place';
 $page = 'place';
-$base_url = '../';
 $css = array('place.css');
 $js = array('place.js');
 include('../header.php');
@@ -9,12 +8,11 @@ include('../header.php');
 
 <div class="row">
   <div class="col-12">
-  <h1>Welcome to r/place</h1>
-  
-  <div id="place-grid"></div>
+    <h1>Welcome to r/place</h1>
+    
+    <div id="place-grid" class="grid"></div>
 
-  <input id="color-picker">
-  <div id="colors"></div>
+    <div id="colors" class="grid"></div>
   </div>
 </div>
 
