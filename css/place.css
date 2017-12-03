@@ -23,13 +23,12 @@
 }
 
 #colors .grid-item {
-  height: 10px;
-  width: 10px;
-  /* display: inline-block; */
+  height: 16px;
+  width: 16px;
 }
 
 #colors .grid-item:last-of-type {
-  width: 20px;
+  width: 32px;
 }
 
 #colors::before {

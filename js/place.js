@@ -27,7 +27,7 @@ request.send()
 initColors()
 
 function initColors() {
-  const intervals = 5
+  const intervals = 3
 
   for (let min = 255 - 255 / intervals; min > 0; min -= 255 / intervals) {
     const row = document.createElement('div')
