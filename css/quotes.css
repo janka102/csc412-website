@@ -1,0 +1,44 @@
+blockquote {
+  font-style: italic;
+  line-height: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+blockquote pre {
+  font: inherit;
+  white-space: pre-wrap;
+}
+
+blockquote cite {
+  font-size: 0.8rem;
+  display: block;
+}
+
+blockquote cite:before {
+  content: '\2014 \2009';
+}
+
+fieldset {
+  border: 1px solid var(--dark);
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+}
+
+legend {
+  width: auto;
+  padding: 0 0.25rem;
+}
+
+#quote-form-toggle {
+  display: none;
+}
+
+#quote-form-toggle ~ form,
+#quote-form-toggle:checked ~ label {
+  display: none;
+}
+
+#quote-form-toggle:checked ~ form {
+  display: block;
+  margin-bottom: 2rem;
+}

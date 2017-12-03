@@ -34,7 +34,6 @@
       <ul class="navbar-nav mr-auto">
         <?php nav_item('about.php', 'About') ?>
         <?php nav_item('resume.php', 'Resume') ?>
-        <?php nav_item('visitor.php', 'Visitors') ?>
         <?php nav_item('quotes.php', 'Quotes') ?>
         <?php nav_item('place', 'r/place') ?>
       </ul>
