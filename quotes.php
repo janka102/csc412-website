@@ -56,6 +56,8 @@
   ?>
 
   <div class="col-12">
+    <h1>Quotes</h1>
+
     <input type="checkbox" id="quote-form-toggle"<?= $last_quote || $last_author ? ' checked="checked"' : '' ?>>
     <label class="btn btn-outline-primary" for="quote-form-toggle">Submit a quote</label>
     <form action="quotes.php" method="POST">

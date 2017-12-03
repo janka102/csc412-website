@@ -169,10 +169,11 @@ function initColors() {
 }
 
 function initGrid(max_x, max_y) {
-  for (let x = 0; x <= max_x; ++x) {
+  for (let y = 0; y <= max_y; ++y) {
     const row = document.createElement('div')
     row.classList.add('grid-row')
-    for (let y = 0; y <= max_y; ++y) {
+
+    for (let x = 0; x <= max_x; ++x) {
       const item = document.createElement('span')
       item.classList.add('grid-item')
       item.style.backgroundColor = '#000'
