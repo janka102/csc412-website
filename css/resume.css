@@ -1,4 +1,5 @@
 h2 {
+  width: 100%;
   display: inline-block;
   border-bottom: 2px solid #bdbdbd;
   height: 1.1em;
@@ -10,13 +11,11 @@ small {
 }
 
 section {
-  border-bottom: 1px solid #333;
   margin-bottom: 1rem;
 }
 
 section article {
   margin: 0 0 1rem 1rem;
-  border-bottom: 1px solid #dbdbdb;
 }
 
 section:last-of-type,
