@@ -69,7 +69,7 @@
         </div>
         <div class="form-group">
           <label for="author">Author:</label>
-          <input name="author" id="author" class="form-control" size="128"<?= $last_author ? ' value="' . htmlspecialchars($last_author) . '"' : '' ?>>
+          <input name="author" id="author" class="form-control" maxlength="128"<?= $last_author ? ' value="' . htmlspecialchars($last_author) . '"' : '' ?>>
         </div>
         <button class="btn btn-primary">Submit</button>
       </fieldset>
@@ -77,7 +77,7 @@
   </div>
 
   <?php
-  $result = $mysqli->query("SELECT `quote`, `author` FROM `jsmick_quotes`");
+  $result = $mysqli->query("SELECT `date`,`quote`, `author` FROM `jsmick_quotes` ORDER BY `date` DESC");
 
   if ($row = $result->fetch_assoc()) {
     do {
