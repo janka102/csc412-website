@@ -33,20 +33,6 @@
     </section>
 
     <section>
-      <h2>Skills</h2>
-
-      <article>
-        <h3>JavaScript</h3>
-        <p>Node.js and client side</p>
-      </article>
-
-      <article>
-        <h3>HTML/CSS</h3>
-        <p><a href="https://getbootstrap.com">bootstrap.css</a>, <a href="http://minicss.org">mini.css</a>, <a href="https://foundation.zurb.com">Foundation</a></p>
-      </article>
-    </section>
-
-    <section>
       <h2>Education</h2>
 
       <article>
@@ -57,6 +43,15 @@
       <article>
         <h3>Diablo Valley College / <small>A.S., Computer Science</small></h3>
         <p>Jun 2014 - Aug 2017</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <article>
+        <h3>FabLabMachineTest / <small><a href="http://janka102.github.io/FabLabMachineTest">http://janka102.github.io/FabLabMachineTest</a></small></h3>
+        <p>A website for my high school wood shop teacher to give to students so they can study for machine tests before using them.</p>
       </article>
     </section>
   </div>
