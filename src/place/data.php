@@ -1,5 +1,8 @@
 <?php
+include('../../auth.php');
+
 $utc = new DateTimeZone('UTC');
+$mysqli = new mysqli($db_host, $db_username, $db_passwd, $db_dbname, $db_port);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $data = json_decode(file_get_contents("php://input"));
@@ -11,8 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $data = (array) $data;
 
   if (isset($data['x']) && isset($data['y']) && isset($data['red']) && isset($data['green']) && isset($data['blue'])) {
-    $mysqli = new mysqli('localhost','csc412','csc412','csc412');
-
     if ($mysqli->connect_errno) {
       printf("Connect failed: %s\n", $mysqli->connect_error);
       exit;
@@ -33,12 +34,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 header('Content-Type: application/json; charset=utf-8');
 
-$mysqli = new mysqli('localhost','csc412','csc412','csc412');
 $query = "SELECT `x`, `y`, `red`, `green`, `blue`, `date` FROM `jsmick_rplace`";
 
 if ($mysqli->connect_errno) {
   printf("Connect failed: %s\n", $mysqli->connect_error);
-  exit();
+  exit;
 }
 
 $data = array();
@@ -59,10 +59,6 @@ if (isset($_GET['latest'])) {
 
 $result = $mysqli->query($query);
 $mysqli->close();
-
-$to_int = function($value) {
-  return (int) $value;
-};
 
 // for ($x = 0; $x <= $data['max_x']; $x++) {
 //   for ($y = 0; $y <= $data['max_y']; $y++) {

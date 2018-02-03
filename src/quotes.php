@@ -3,12 +3,13 @@
   $css = array('quotes.css');
   $js = array();
   include('header.php');
+  include('../auth.php');
 ?>
 
 <div class="row">
   <?php
   // Create connection
-  $mysqli = new mysqli('localhost','csc412','csc412','csc412');
+  $mysqli = new mysqli($db_host, $db_username, $db_passwd, $db_dbname, $db_port);
   $last_quote = false;
   $last_author = false;
 
