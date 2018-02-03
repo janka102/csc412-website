@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title><?= $title ? ($title . ' | ') : '' ?>jsmick</title>
+  <title><?= isset($title) ? ($title . ' | ') : '' ?>jsmick</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <base href="/<?= $_SERVER['SERVER_PORT'] == 80 ? '~jsmick/' : '' ?>">
 
