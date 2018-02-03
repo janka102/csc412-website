@@ -9,13 +9,15 @@
   <?php
   // Create connection
   $mysqli = new mysqli('localhost','csc412','csc412','csc412');
+  $last_quote = false;
+  $last_author = false;
 
   // Check connection
   if ($mysqli->connect_errno) {
     echo '<div class="alert alert-danger col-12" role="alert">Failed to connect to MySQL: (', htmlspecialchars($mysqli->connect_errno), ') ', htmlspecialchars($mysqli->connect_error), '</div>';
   }
 
-  if ($_POST['quote'] && $_POST['author']) {
+  if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['quote'] && $_POST['author']) {
     $_POST['quote'] = substr($_POST['quote'], 0, 256);
     $_POST['author'] = substr($_POST['author'], 0, 128);
 
@@ -58,7 +60,7 @@
   <div class="col-12">
     <h1>Quotes</h1>
 
-    <input type="checkbox" id="quote-form-toggle"<?= $last_quote || $last_author ? ' checked="checked"' : '' ?>>
+    <input id="quote-form-toggle" type="checkbox"<?= $last_quote || $last_author ? ' checked="checked"' : '' ?>>
     <label class="btn btn-outline-primary" for="quote-form-toggle">Submit a quote</label>
     <form action="quotes.php" method="POST">
       <fieldset>

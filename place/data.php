@@ -18,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       exit;
     }
 
-    $last_submit++;
     $now = (new DateTime('now', $utc))->format('Y-m-d H:i:s');
 
     $stmt = $mysqli->prepare('UPDATE `jsmick_rplace` SET `red`=?, `green`=?, `blue`=?, `date`=? WHERE `x`=? AND `y`=?');
@@ -26,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute();
     $mysqli->close();
 
-    print_r($last_submit);
+    print_r(true);
   }
 
   exit;
@@ -97,7 +96,7 @@ while ($row = $result->fetch_assoc()) {
     $data['latest'] = $d;
   }
 
-  array_push($data['data'], array(x=>$x,y=>$y,red=>$r,green=>$g,blue=>$b));
+  array_push($data['data'], array('x'=>$x,'y'=>$y,'red'=>$r,'green'=>$g,'blue'=>$b));
 }
 
 echo json_encode($data);
